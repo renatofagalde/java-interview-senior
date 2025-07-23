@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    List<Order> findByCustomerEmail(String email);  // PROBLEMA: Query N+1 problem
+    List<Order> findByCustomerEmail(String email);
 
     @Query(value = "SELECT * FROM orders WHERE status = ?1", nativeQuery = true)
     List<Order> findOrdersByStatus(String status);

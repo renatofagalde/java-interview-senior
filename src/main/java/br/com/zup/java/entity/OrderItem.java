@@ -1,6 +1,7 @@
 package br.com.zup.java.entity;
 
 import jakarta.persistence.*;
+
 import java.math.BigDecimal;
 
 @Entity
