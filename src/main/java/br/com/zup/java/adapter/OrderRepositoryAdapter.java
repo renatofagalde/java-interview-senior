@@ -20,28 +20,9 @@ public class OrderRepositoryAdapter implements OrderRepositoryPort {
         return orderRepository.save(order);
     }
 
-    @Override
-    public Optional<Order> findById(Long id) {
-        return orderRepository.findById(id);
-    }
 
     @Override
     public List<Order> findAll() {
         return orderRepository.findAll();
-    }
-
-    @Override
-    public void deleteById(Long id) {
-        orderRepository.deleteById(id);
-    }
-
-    @Override
-    public List<Order> findByCustomerEmail(String email) {
-        return orderRepository.findByCustomerEmail(email);
-    }
-
-    @Override
-    public List<Order> findByStatus(String status) {
-        return orderRepository.findOrdersByStatus(status);
     }
 }
